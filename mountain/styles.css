@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#nav-container {
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    padding: 28px 60px;
+    position: absolute;
+    width: 100%;
+}
+
+#nav-container ul {
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    list-style: none;
+}
+
+#nav-container ul li a{
+    list-style: none;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
+
+#banner{
+    background-image: url('./Assets/Banner.jpg');
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+.front-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
