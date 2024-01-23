@@ -35,7 +35,7 @@ body {
     font-size: 18px;
     color: #001e4d;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .btn {
@@ -51,7 +51,7 @@ body {
     cursor: pointer;
 }
 
-.btn:hover {
+.btn:hover:not([disabled]) {
     background: #222;
     color: white;
     font-weight: 500;
@@ -63,12 +63,16 @@ body {
 
 }
 
+.btn:disabled{
+    cursor: no-drop;
+}
+
 #next_btn_ctn {
     display: none;
     justify-content: center;
 }
 
-.next_btn {
+#next_btn {
 
     background: #001e4d;
     color: white;
@@ -77,5 +81,15 @@ body {
     border-radius: 20px;
     margin-top: 10px;
     cursor: pointer;
+
+}
+
+.correct {
+
+    background: rgb(172, 255, 147);
+}
+
+.incorrect {
+    background: rgb(254, 138, 138);
 
 }
