@@ -5,6 +5,9 @@ const obj = {
   name: "imraan",
   age: 22,
   heigth: "5'6",
+  get: function () {
+    console.log(this.name);
+  },
   skill: {
     lang: "Javascript",
     tech: "Reactjs",
@@ -12,8 +15,14 @@ const obj = {
   city: "delhi",
 };
 
-let entry = Object.entries(obj);
+// obj.get();
+class useName {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+}
 
-console.log(entry);
-console.log(entry[0]);
-console.log(entry[0][0]);
+let newUserName = new useName("imran", 23);
+newUserName.name = "harun";
+console.log(newUserName.name);
