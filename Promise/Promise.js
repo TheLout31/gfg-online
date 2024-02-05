@@ -16,25 +16,41 @@ const url = "https://reqres.in/api/products/3";
 
 // console.log(promise);
 
-function db() {
-  return 10 < 2 ? true : false;
+// function db() {
+//   return 10 < 2 ? true : false;
+// }
+
+// console.log(db());
+
+// let newPromise = new Promise((resolve, reject) => {
+//   if (db === true) {
+//     resolve("my code works");
+//   } else {
+//     const error = new Error("something went wrong");
+//     reject("you code is wrong", error.message);
+//   }
+// });
+
+// newPromise
+//   .then((res) => {
+//     console.log(res);
+//   })
+//   .catch((error) => {
+//     console.log(error, "Your code failed");
+//   });
+
+async function getData() {
+  try {
+    let res = await fetch(url);
+    let data = await res.json();
+    return data.data;
+  } catch (error) {
+    console.log(error);
+  }
 }
 
-console.log(db());
+getData().then((res) => {
+  console.log(`Name:${res.name}  
+  Year :${res.year}`);
 
-let newPromise = new Promise((resolve, reject) => {
-  if (db === true) {
-    resolve("my code works");
-  } else {
-    const error = new Error("something went wrong");
-    reject("you code is wrong", error.message);
-  }
 });
-
-newPromise
-  .then((res) => {
-    console.log(res);
-  })
-  .catch((error) => {
-    console.log(error, "Your code failed");
-  });
