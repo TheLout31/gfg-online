@@ -1,12 +1,31 @@
+let sentence  = "kese ho bhai tum"
 
-function nthlargest(arr, highest) {
+// get each words from the sentence
+function getWords(s){
+    let newArr = [];
+    let str="";
+    let start = 0;
+    for(let i=0;i<=s.length ;i++){
+        str=""
+        if(s[i] == ' ' || i === s.length){
+            for(let j =start ; j<i;j++){
+                str += s[j];
+            }
+            newArr.push(str);
+            start = i+1;
+        }
+    }
+    return newArr;
+}
+//sorting the arr using Selection sorting for each word length
+function nthlargest(arr) {
 	// write your code here
 	let temp =0;
 	for(let i =0;i<arr.length;i++){
         let smallest =i;
 		for(let j=i+1;j<arr.length;j++){
             
-            if(arr[smallest] > arr[j]){
+            if(arr[smallest].length > arr[j].length){
                 smallest = j;
             }
 		    
@@ -18,7 +37,6 @@ function nthlargest(arr, highest) {
 	return arr
 }
 
-const arr = [7,8,3,1,2];
-const highest = 4;
 
-console.log(nthlargest(arr, highest));
+let splitArr = getWords(sentence);
+console.log(nthlargest(splitArr));
