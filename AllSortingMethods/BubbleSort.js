@@ -1,5 +1,5 @@
 //Take the maximum to the end 
-
+// Time complexity O(N^2)
 function BubbleSort(nums) {
   let temp = 0;
   for (let i = 0; i < nums.length; i++) {

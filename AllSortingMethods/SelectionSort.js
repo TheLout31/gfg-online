@@ -1,5 +1,5 @@
 // get the minimum and swap
-
+// Time complexity O(N^2)
 function SelectionSort(nums) {
   let temp = 0;
   for (let i = 0; i < nums.length; i++) {
