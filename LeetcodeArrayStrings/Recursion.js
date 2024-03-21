@@ -7,9 +7,7 @@ function naturalNum(x, n) {
     }
   
     let pow = naturalNum(x, n - 1);
-    console.log(pow)
     let s = x * pow;
-    console.log(s)
     return s;
   }
   
