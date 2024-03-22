@@ -74,13 +74,15 @@ class LL {
       firstPointer = firstPointer.next;
       secondPointer = secondPointer.next.next;
     }
-    
+
     while (firstPointer !== null) {
       console.log(firstPointer.data + "-->");
       firstPointer = firstPointer.next;
     }
-    console.log("NULL")
+    console.log("NULL");
   }
+
+  
 
   printLL() {
     let currNode = this.head;
@@ -89,7 +91,6 @@ class LL {
       currNode = currNode.next;
     }
     console.log("NULL");
-    
   }
 
   getSize() {
@@ -98,11 +99,11 @@ class LL {
 }
 
 let newLL = new LL();
-
+newLL.addLast(3);
+newLL.addLast(4);
 newLL.addLast(3);
 newLL.addFirst(2);
 newLL.addFirst(1);
-newLL.getSize();
-
 newLL.printLL();
-newLL.FindMiddle();
+
+
