@@ -1,4 +1,4 @@
-var isSubsequence = function (s, t) {
+var isSubset = function (s, t) {
   let sp = 0;
   let tp = 0;
   let count = 0;
@@ -18,4 +18,4 @@ var isSubsequence = function (s, t) {
   return false;
 };
 
-console.log(isSubsequence("axc", "ahbgdc"));
+console.log(isSubset("dfgac", "dfdavgac"));
